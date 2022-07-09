@@ -9,11 +9,18 @@ In this Dapp, user can upload and save their document on the blockchain. The Doc
 # How to Run this code
 - Install dependencies :
   > npm install
+- Make sure you already install Pyhton and if you already install Python, install pipx
+  > pip install pipx  
+  > pip ensurepath
 - Install Brownie
   > pip install eth-brownie
+- Add Ganache Local Network (You can get the Ganache IP and Chainid from Ganache app, so make sure you already download Ganache)
+  > brownie networks add Ethereum ganache-local=http://127.0.0.1:7545 chainid=5777
 - Deploy Smartcontract
   > brownie run scripts/deploy.py --network=ganache-local
 - Reset Smartcontract
   > brownie run scripts/reset.py
 - Update the frontend
   > brownie run scripts/update_front_end.py
+- Run the Code on Ganache Local Network  (Before you run it, you have to setup the Local Network Test on you Metamask first. Make sure you Setup First)
+  > npm start
